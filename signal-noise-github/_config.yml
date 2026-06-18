@@ -1,0 +1,20 @@
+title: "AI & Me"
+description: "Five personal investigations into AI companionship, digital dependency, and what it means to feel less alone in an age of algorithmic empathy."
+baseurl: "/Blog"
+url: "https://twevythelwel-star.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:title/
+
+# Exclude static fallback folder from Jekyll build
+exclude:
+  - posts/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+kramdown:
+  input: GFM
+  hard_wrap: false

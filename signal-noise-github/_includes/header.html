@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo">
+      <span class="logo-dot"></span>[ AI &amp; Me ]
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}"
+         {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>Posts</a>
+      <a href="{{ '/about.html' | relative_url }}"
+         {% if page.url contains 'about' %}class="active"{% endif %}>About</a>
+    </nav>
+  </div>
+</header>
