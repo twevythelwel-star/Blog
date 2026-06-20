@@ -1,3 +1,5 @@
+# Ignore Jekyll and Bundler build artifacts in version control
+# These folders are generated during local build and deployment.
 _site/
 .jekyll-cache/
 .jekyll-metadata

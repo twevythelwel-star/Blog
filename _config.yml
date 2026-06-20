@@ -1,3 +1,4 @@
+# Jekyll site configuration for GitHub Pages deployment
 title: "AI & Me"
 description: "Five personal investigations into AI companionship, digital dependency, and what it means to feel less alone in an age of algorithmic empathy."
 baseurl: "/Blog"

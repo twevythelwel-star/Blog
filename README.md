@@ -1,4 +1,5 @@
-# AI & Me 
+<!-- README: Overview and project instructions for contributors -->
+# AI & Me — Signal / Noise
 
 A blog on human-AI relationships, built with Jekyll for GitHub Pages.
 
