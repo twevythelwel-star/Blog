@@ -1,5 +1,5 @@
 <!-- README: Overview and project instructions for contributors -->
-# AI & Me — Signal / Noise
+# AI & Me 
 
 A blog on human-AI relationships, built with Jekyll for GitHub Pages.
 
