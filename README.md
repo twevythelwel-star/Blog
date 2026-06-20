@@ -1,75 +1,47 @@
-<!-- README: Overview and project instructions for contributors -->
-# AI & Me 
+# Signal / Noise
 
-A blog on human-AI relationships, built with Jekyll for GitHub Pages.
+A static blog about human-AI relationships, with Jekyll source files included to show how the site links to a Jekyll structure.
 
-**Live site:** https://twevythelwel-star.github.io/Blog/  
-**Repository:** https://github.com/twevythelwel-star/Blog
-
----
+Open `index.html` directly in a browser to view the restored static layout and navigation.
 
 ## Project Structure
 
-```
+```text
 .
-├── .gitignore               # Excludes _site/, .jekyll-cache/, vendor/
-├── Gemfile                  # github-pages gem — locks to GitHub Pages versions
-├── _config.yml              # baseurl: /Blog, url: twevythelwel-star.github.io
-│
-├── _includes/               # Shared partials — Jekyll injects these at build time
-│   ├── head.html            # <head> — charset, viewport, title, CSS link
-│   ├── header.html          # Sticky nav — active state set via Liquid, not JS
-│   └── footer.html          # Site footer
-│
-├── _layouts/                # Page templates
-│   ├── default.html         # Base layout — all pages inherit this
-│   └── post.html            # Single post — adds prev/next nav dynamically
-│
-├── _posts/                  # Blog posts as Markdown — Jekyll generates HTML
-│   ├── 2026-06-01-ai-best-friend.md
-│   ├── 2026-06-05-generation-ai.md
-│   ├── 2026-06-09-ai-girlfriend.md
-│   ├── 2026-06-11-ai-therapist.md
-│   └── 2026-06-14-future-bonds.md
-│
-├── index.html               # Homepage — Liquid loop auto-generates post cards
-├── about.html               # About page
-│
+├── index.html           # Static homepage and post card grid
+├── about.html           # Static about page
+├── posts/               # Static post pages linked from the homepage
 ├── assets/
-│   ├── css/style.css        # Full design system — unchanged from original
+│   ├── css/style.css    # Existing visual design system
 │   └── js/
-│       ├── nav.js           # Placeholder — active nav now handled by Liquid
-│       └── thread.js        # Animated SVG connection-thread divider
-│
-└── posts/                   # Original static HTML — browser fallback only
-                             # Excluded from Jekyll build via _config.yml
+│       ├── nav.js       # Shared header/footer injection
+│       └── thread.js    # Animated connection-thread divider
+├── _config.yml          # Jekyll configuration
+├── _posts/              # Jekyll post source files with YAML front matter
+├── _layouts/            # Jekyll layouts
+├── _includes/           # Jekyll header/footer partials
+├── Gemfile              # Jekyll dependency definition
+└── Gemfile.lock         # Locked Ruby dependency versions
 ```
 
----
+## Jekyll Link
 
-## Push to GitHub (run these in VS Code terminal)
+The Jekyll connection is shown through:
 
-```bash
-cd signal-noise-github
+- `_config.yml`
+- `_posts/`
+- `_layouts/`
+- `_includes/`
+- `Gemfile`
+- `Gemfile.lock`
 
-git init
-git add .
-git commit -m "Initial Jekyll blog — AI & Me"
-git remote add origin https://github.com/twevythelwel-star/Blog.git
-git branch -M main
-git push -u origin main
-```
+The `posts/` folder is kept for the previous static layout and direct browser navigation. It is excluded from Jekyll builds so `_posts/` remains the Jekyll source of truth.
 
-Then go to: **GitHub repo → Settings → Pages → Source → main / (root) → Save**
-
-Your site goes live at: **https://twevythelwel-star.github.io/Blog/**
-
----
-
-## Run Locally (optional check before pushing)
+## Run With Jekyll
 
 ```bash
 bundle install
 bundle exec jekyll serve
-# → http://localhost:4000/Blog/
 ```
+
+Generated folders such as `_site/` and `.jekyll-cache/` are intentionally ignored.
